@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Editor</title>
+    <style>
+    body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+        margin: 20px;
+    }
+
+    .canvas-container {
+        display: flex;
+        justify-content: center;
+        flex-direction: row; /* Menata canvas secara horizontal */
+        gap: 20px; /* Memberikan jarak antar canvas */
+        margin-bottom: 20px;
+    }
+
+    canvas {
+        border: 1px solid #ccc;
+        margin-top: 10px;
+    }
+
+    #download {
+        margin-top: 20px;
+        padding: 10px 20px;
+        background-color: #4CAF50;
+        color: white;
+        border: none;
+        cursor: pointer;
+        font-size: 16px;
+        border-radius: 5px;
+    }
+
+    #download:hover {
+        background-color: #45a049;
+    }
+
+    </style>
+</head>
+<body>
+    <h1>Simple Image Editor</h1>
+    <input type="file" id="upload" accept="image/*">
+    <button id="grayscale">Convert to Grayscale</button>
+    <button id="blur">Apply Blur</button>
+    <button id="goBack">Go Back</button>
+    <div class="canvas-container">
+        <canvas id="originalCanvas"></canvas>
+        <canvas id="editedCanvas"></canvas>
+    </div>
+    <button id="download">Download Image</button>    
+    <script src="app.js"></script>
+</body>
+</html>
